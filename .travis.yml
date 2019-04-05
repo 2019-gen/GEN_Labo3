@@ -7,3 +7,6 @@ cache:
 
 sudo: false
 script: mvn clean test
+
+notifications:
+  slack: heig-boom:svZ0AC4gtruDMf2jKzgDdDWB
