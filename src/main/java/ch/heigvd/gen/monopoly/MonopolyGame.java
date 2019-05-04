@@ -57,7 +57,7 @@ public class MonopolyGame {
     void playRound() {
         System.out.println("Debut du tour " + ++currentRound + " : ");
         for (Player player : players) {
-            player.takeTurn(this);
+            player.takeTurn(dice);
         }
     }
 
