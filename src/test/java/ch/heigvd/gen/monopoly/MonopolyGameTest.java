@@ -1,5 +1,6 @@
-package ch.heigvd.gen;
+package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.MonopolyGame;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;

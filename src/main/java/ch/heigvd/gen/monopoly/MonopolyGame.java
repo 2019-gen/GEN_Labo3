@@ -1,6 +1,4 @@
-package ch.heigvd.gen;
-
-import java.util.LinkedList;
+package ch.heigvd.gen.monopoly;
 
 /**
  * Cette classe représente le jeu du monopoly. C'est dans cette classe
