@@ -21,6 +21,11 @@ public class Die {
         r = new Random();
     }
 
+    /**
+     * Constructeur
+     *
+     * @param upperBound Valeur max du dé
+     */
     public Die(int upperBound) {
         this.upperBound = upperBound;
     }
