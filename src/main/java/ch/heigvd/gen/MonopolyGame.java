@@ -13,9 +13,9 @@ import java.util.LinkedList;
 public class MonopolyGame {
     private static final int NUMB_OF_ROUNDS = 20;
     private static final int NUMB_OF_DICE = 2;
-    private final Board board;
-    private final LinkedList<Die> dice = new LinkedList<Die>();
-    private final LinkedList<Player> players = new LinkedList<Player>();
+//    private final Board board;
+//    private final LinkedList<Die> dice = new LinkedList<Die>();
+//    private final LinkedList<Player> players = new LinkedList<Player>();
 
     private int currentRound = 0;
 
@@ -30,14 +30,14 @@ public class MonopolyGame {
         }
 
         for (String playerName : players) {
-            this.players.add(new Player(playerName));
+//            this.players.add(new Player(playerName));
         }
 
         for (int i = 0; i < NUMB_OF_DICE; ++i) {
-            dice.add(new Die());
+//            dice.add(new Die());
         }
 
-        board = new Board();
+//        board = new Board();
     }
 
     /**
@@ -54,9 +54,9 @@ public class MonopolyGame {
      */
     void playRound() {
         System.out.println("Debut du tour+" + ++currentRound + " : ");
-        for (Player player : players) {
-            player.takeTurn();
-        }
+//        for (Player player : players) {
+//            player.takeTurn();
+//        }
     }
 
     /**

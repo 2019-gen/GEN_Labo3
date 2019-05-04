@@ -16,7 +16,7 @@ public class MonopolyGameTest {
 
         // trop peu de joueurs
         assertThrows(IllegalArgumentException.class, () -> {
-            new MonopolyGame();
+            new MonopolyGame(OnePlayer);
         });
 
         // trop de joeurs
