@@ -1,7 +1,6 @@
 package ch.heigvd.gen.player;
 
 import ch.heigvd.gen.monopoly.Die;
-import ch.heigvd.gen.monopoly.MonopolyGame;
 
 import java.util.LinkedList;
 
