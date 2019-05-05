@@ -1,5 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.square.Square;
+
 /**
  * Cette class représente un pièce du Monopoly
  *

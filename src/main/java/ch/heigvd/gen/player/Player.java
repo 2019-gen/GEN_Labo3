@@ -3,7 +3,7 @@ package ch.heigvd.gen.player;
 import ch.heigvd.gen.monopoly.Board;
 import ch.heigvd.gen.monopoly.Die;
 import ch.heigvd.gen.monopoly.Piece;
-import ch.heigvd.gen.monopoly.Square;
+import ch.heigvd.gen.monopoly.square.Square;
 
 import java.util.LinkedList;
 

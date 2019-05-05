@@ -1,5 +1,6 @@
-package ch.heigvd.gen.monopoly;
+package ch.heigvd.gen.monopoly.square;
 
+import ch.heigvd.gen.monopoly.square.Square;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ public class SquareTest {
     @BeforeAll
     static void setUp() {
         squareName = "test";
-        square = new Square(squareName);
+        square = new RegularSquare(squareName);
     }
 
     @Test
