@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly.player;
 
-import ch.heigvd.gen.monopoly.square.Square;
+import ch.heigvd.gen.monopoly.board.square.Square;
 
 /**
  * Cette class représente un pièce du Monopoly

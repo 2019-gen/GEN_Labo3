@@ -1,4 +1,4 @@
-package ch.heigvd.gen.monopoly.square;
+package ch.heigvd.gen.monopoly.board.square;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

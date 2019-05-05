@@ -1,8 +1,7 @@
 package ch.heigvd.gen.monopoly.player;
 
-import ch.heigvd.gen.monopoly.player.Piece;
-import ch.heigvd.gen.monopoly.square.RegularSquare;
-import ch.heigvd.gen.monopoly.square.Square;
+import ch.heigvd.gen.monopoly.board.square.RegularSquare;
+import ch.heigvd.gen.monopoly.board.square.Square;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

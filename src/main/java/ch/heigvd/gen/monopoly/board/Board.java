@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly.board;
 
-import ch.heigvd.gen.monopoly.square.*;
+import ch.heigvd.gen.monopoly.board.square.*;
 
 import java.util.ArrayList;
 

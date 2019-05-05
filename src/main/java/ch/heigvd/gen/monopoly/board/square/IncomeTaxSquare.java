@@ -1,4 +1,4 @@
-package ch.heigvd.gen.monopoly.square;
+package ch.heigvd.gen.monopoly.board.square;
 
 import ch.heigvd.gen.monopoly.player.Player;
 
