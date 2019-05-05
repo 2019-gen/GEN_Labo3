@@ -1,13 +1,12 @@
 package ch.heigvd.gen.monopoly.square;
 
-import ch.heigvd.gen.monopoly.square.Square;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SquareTest {
-    private static Square square;
+public class RegularSquareTest {
+    private static RegularSquare square;
     private static String squareName;
 
     @BeforeAll
@@ -17,7 +16,7 @@ public class SquareTest {
     }
 
     @Test
-    void aSquareShouldHaveAName() {
+    void aRegularSquareShouldHaveAName() {
         assertEquals(square.getName(), squareName);
     }
 }

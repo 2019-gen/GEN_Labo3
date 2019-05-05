@@ -33,6 +33,10 @@ class BoardTest {
             names.add("Square " + i);
         }
 
+        names.set(4, "IncomeTax");
+        names.set(10, "Jail");
+        names.set(30, "GoToJail");
+
         ArrayList<Square> squares = board.getSquares();
         for (int i = 0; i < board.getNbrOfSquares(); i++) {
             assertEquals(names.get(i), squares.get(i).getName());
