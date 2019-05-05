@@ -19,9 +19,8 @@ public class Player {
     public void takeTurn(Board board, Cup cup) {
         System.out.println(this + " commence son tour...");
 
-        int score = 0;
-//        cup.roll();
-//        int score = cup.getTotal();
+        cup.roll();
+        int score = cup.getTotal();
 
         System.out.println(this + " a fait un lancé de " + score);
 

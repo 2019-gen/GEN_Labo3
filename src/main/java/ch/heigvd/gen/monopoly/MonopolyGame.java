@@ -38,13 +38,13 @@ public class MonopolyGame {
         board = new Board();
 
         // Noms pour les pièces utilisées par les joueurs
-        List<String> pieceNames = Arrays.asList("Car", "Shoe", "TV", "Dog", "Penguin", "Shield", "Cannon", "Horse");
+        List<String> pieceNames = Arrays.asList("Voiture", "Chaussure", "TV", "Chien", "Pingouin", "Bouclier",
+                "Canon", "Cheval");
         Collections.shuffle(pieceNames);
 
         int c = 0;
         for (String playerName : players) {
-            this.players.add(new Player(playerName, pieceNames.get(c), board.getSquares().get(0)));
-            c++;
+            this.players.add(new Player(playerName, pieceNames.get(c++), board.getSquares().get(0)));
         }
 
         cup = new Cup(NUMB_OF_DICE);
