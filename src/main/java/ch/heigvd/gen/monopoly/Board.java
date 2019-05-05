@@ -19,7 +19,7 @@ public class Board {
     /**
      * Constructeur : génère les cases du plateau
      */
-    Board() {
+    public Board() {
         // Création de la première case
         squares.add(new GoSquare());
 

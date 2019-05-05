@@ -70,9 +70,10 @@ public class Player {
      * @throws IllegalArgumentException En cas de montant négatif
      */
     public void addCash(int value) throws IllegalArgumentException {
-        if (cash < 0) {
+        if (value < 0) {
             throw new IllegalArgumentException("Impossible d'ajouter du cash négatif");
         }
+
         cash += value;
     }
 
@@ -86,6 +87,7 @@ public class Player {
         if (cash < value) {
             throw new IllegalArgumentException("Impossible d'avoir du cash en négatif");
         }
+
         cash -= value;
     }
 
