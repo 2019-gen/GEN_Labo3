@@ -1,11 +1,9 @@
 package ch.heigvd.gen.player;
 
 import ch.heigvd.gen.monopoly.Board;
-import ch.heigvd.gen.monopoly.Die;
+import ch.heigvd.gen.monopoly.dice.Cup;
 import ch.heigvd.gen.monopoly.Piece;
 import ch.heigvd.gen.monopoly.square.Square;
-
-import java.util.LinkedList;
 
 public class Player {
     private final String name;
@@ -18,14 +16,12 @@ public class Player {
         this.cash = 1500;
     }
 
-    public void takeTurn(Board board, LinkedList<Die> dice) {
-        System.out.println(this + " commence son tour ...");
+    public void takeTurn(Board board, Cup cup) {
+        System.out.println(this + " commence son tour...");
 
         int score = 0;
-        for (Die d : dice) {
-            d.roll();
-            score += d.getFaceValue();
-        }
+//        cup.roll();
+//        int score = cup.getTotal();
 
         System.out.println(this + " a fait un lancé de " + score);
 

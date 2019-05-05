@@ -1,5 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.dice.Cup;
 import ch.heigvd.gen.player.Player;
 
 import java.util.Arrays;
@@ -19,8 +20,8 @@ public class MonopolyGame {
     private static final int NUMB_OF_ROUNDS = 20;
     private static final int NUMB_OF_DICE = 2;
     private final Board board;
-    private final LinkedList<Die> dice = new LinkedList<Die>();
-    private final LinkedList<Player> players = new LinkedList<Player>();
+    private final Cup cup;
+    private final LinkedList<Player> players = new LinkedList<>();
 
     private int currentRound;
 
@@ -46,9 +47,7 @@ public class MonopolyGame {
             c++;
         }
 
-        for (int i = 0; i < NUMB_OF_DICE; ++i) {
-            dice.add(new Die());
-        }
+        cup = new Cup(NUMB_OF_DICE);
     }
 
     /**
@@ -56,9 +55,11 @@ public class MonopolyGame {
      */
     void playGame() {
         System.out.println("Debut de la partie :\n");
+
         for (currentRound = 1; currentRound <= NUMB_OF_ROUNDS; ++currentRound) {
             playRound();
         }
+
         System.out.println("Fin de la partie");
     }
 
@@ -67,19 +68,11 @@ public class MonopolyGame {
      */
     void playRound() {
         System.out.println("Debut du tour " + currentRound + " : ");
+
         for (Player player : players) {
-            player.takeTurn(board, dice);
+            player.takeTurn(board, cup);
             System.out.println();
         }
-    }
-
-    /**
-     * Getter permettant d'obtenir les dès du jeux
-     *
-     * @return liste des dés
-     */
-    public LinkedList<Die> getDice() {
-        return dice;
     }
 
     /**
