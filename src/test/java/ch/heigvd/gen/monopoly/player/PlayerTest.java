@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly.player;
 
-import ch.heigvd.gen.monopoly.Board;
+import ch.heigvd.gen.monopoly.board.Board;
 import ch.heigvd.gen.monopoly.dice.Cup;
 import ch.heigvd.gen.monopoly.square.RegularSquare;
 import ch.heigvd.gen.monopoly.square.Square;
