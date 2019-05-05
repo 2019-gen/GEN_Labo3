@@ -27,4 +27,14 @@ public class Square {
     public String getName() {
         return name;
     }
+
+    /**
+     * Surcharge de toString pour obtenir le nom de la case
+     *
+     * @return Le nom de la case
+     */
+    @Override
+    public String toString() {
+        return name;
+    }
 }
