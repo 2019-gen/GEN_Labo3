@@ -26,21 +26,26 @@ class BoardTest {
 
     @Test
     void squareNamesShouldFollowSpec() {
+        int nbrOfSquares = board.getNbrOfSquares();
+
         // Liste des noms selon la spec
-        ArrayList<String> names = new ArrayList<>();
-        names.add("Go");
-        for (int i = 1; i < board.getNbrOfSquares(); i++) {
-            names.add("Square " + i);
+        String[] specNames = new String[nbrOfSquares];
+        specNames[0] = "Go";
+        for (int i = 1; i < nbrOfSquares; i++) {
+            specNames[i] = "Square " + i;
         }
+        specNames[4] = "IncomeTax";
+        specNames[10] = "Jail";
+        specNames[30] = "GoToJail";
 
-        names.set(4, "IncomeTax");
-        names.set(10, "Jail");
-        names.set(30, "GoToJail");
-
+        // Liste des noms effectifs
+        String[] effectiveNames = new String[nbrOfSquares];
         ArrayList<Square> squares = board.getSquares();
-        for (int i = 0; i < board.getNbrOfSquares(); i++) {
-            assertEquals(names.get(i), squares.get(i).getName());
+        for (int i = 0; i < squares.size(); i++) {
+            effectiveNames[i] = squares.get(i).getName();
         }
+
+        assertArrayEquals(effectiveNames, specNames);
     }
 
     @Test
