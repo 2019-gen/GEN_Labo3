@@ -10,6 +10,8 @@ import ch.heigvd.gen.monopoly.player.Player;
  * @since 05.05.2019
  */
 public class GoSquare extends Square {
+    private static final int REWARD = 200;
+
     /**
      * Constructeur
      */
@@ -20,6 +22,7 @@ public class GoSquare extends Square {
     @Override
     public void landedOn(Player p) {
         // Ajout de 200$ au joueur
-        p.addCash(200);
+        p.addCash(REWARD);
+        System.out.println("Case départ, récompense : " + REWARD);
     }
 }

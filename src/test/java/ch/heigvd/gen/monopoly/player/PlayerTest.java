@@ -56,7 +56,7 @@ public class PlayerTest {
     }
 
     @Test
-    void takeTurnsShouldMakeTheGameAdvance() {
+    void takeTurnShouldMakeTheGameAdvance() {
         Board board = new Board();
         Cup cup = new Cup(2);
 
