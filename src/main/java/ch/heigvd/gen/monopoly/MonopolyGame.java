@@ -19,7 +19,7 @@ public class MonopolyGame {
     private final LinkedList<Die> dice = new LinkedList<Die>();
     private final LinkedList<Player> players = new LinkedList<Player>();
 
-    private int currentRound = 0;
+    private int currentRound;
 
     /**
      * Constructeur du jeu monopoly. Crée les joueurs et les dés.
@@ -46,18 +46,21 @@ public class MonopolyGame {
      * Méthode qui lance le jeu
      */
     void playGame() {
-        while (currentRound < NUMB_OF_ROUNDS) {
+        System.out.println("Debut de la partie :\n");
+        for (currentRound = 1; currentRound <= NUMB_OF_ROUNDS; ++currentRound){
             playRound();
         }
+        System.out.println("Fin de la partie");
     }
 
     /**
      * Méthode qui réalise un tour par joueur
      */
     void playRound() {
-        System.out.println("Debut du tour " + ++currentRound + " : ");
+        System.out.println("Debut du tour " + currentRound + " : ");
         for (Player player : players) {
             player.takeTurn(dice);
+            System.out.println();
         }
     }
 
