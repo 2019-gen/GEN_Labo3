@@ -11,10 +11,9 @@ public class Player {
     private final String name;
     private final Piece piece;
 
-    public Player(String name, Square startSquare) {
+    public Player(String name, String pieceName, Square startSquare) {
         this.name = name;
-        // TODO: Piece en tant qu'enum?
-        this.piece = new Piece("Test", startSquare);
+        this.piece = new Piece(pieceName, startSquare);
     }
 
     public void takeTurn(Board board, LinkedList<Die> dice) {
@@ -31,11 +30,11 @@ public class Player {
         Square oldLocation = piece.getLocation();
         piece.setLocation(board.getSquare(oldLocation, score));
 
-        System.out.println(this + " avance sa piece de la case " + oldLocation + " a la case " + piece.getLocation());
+        System.out.println(this + " avance sa pièce " + piece + " de la case " + oldLocation + " a la case "
+                + piece.getLocation());
     }
 
     public String toString() {
         return name;
     }
-
 }

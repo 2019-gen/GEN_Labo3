@@ -2,7 +2,10 @@ package ch.heigvd.gen.monopoly;
 
 import ch.heigvd.gen.player.Player;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Cette classe représente le jeu du monopoly. C'est dans cette classe
@@ -33,8 +36,14 @@ public class MonopolyGame {
 
         board = new Board();
 
+        // Noms pour les pièces utilisées par les joueurs
+        List<String> pieceNames = Arrays.asList("Car", "Shoe", "TV", "Dog", "Penguin", "Shield", "Cannon", "Horse");
+        Collections.shuffle(pieceNames);
+
+        int c = 0;
         for (String playerName : players) {
-            this.players.add(new Player(playerName, board.getSquares().get(0)));
+            this.players.add(new Player(playerName, pieceNames.get(c), board.getSquares().get(0)));
+            c++;
         }
 
         for (int i = 0; i < NUMB_OF_DICE; ++i) {

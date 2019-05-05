@@ -23,15 +23,6 @@ public class Piece {
     }
 
     /**
-     * Permet d'obtenir le nom de la pièce
-     *
-     * @return Le nom de la pièce
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
      * Permet d'obtenir la location de la pièce
      *
      * @return La location de la pièce
@@ -47,5 +38,24 @@ public class Piece {
      */
     public void setLocation(Square location) {
         this.location = location;
+    }
+
+    /**
+     * Permet d'obtenir le nom de la pièce
+     *
+     * @return Le nom de la pièce
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Surcharge de toString pour obtenir le nom de la pièce
+     *
+     * @return Le nom de la pièce
+     */
+    @Override
+    public String toString() {
+        return name;
     }
 }
