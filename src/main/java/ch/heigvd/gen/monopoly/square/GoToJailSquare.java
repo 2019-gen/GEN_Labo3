@@ -3,13 +3,13 @@ package ch.heigvd.gen.monopoly.square;
 import ch.heigvd.gen.player.Player;
 
 /**
- * Cette classe représente la case GoToJail du jeux Monopoly
+ * Cette classe représente la case GoToJailSquare du jeux Monopoly
  *
  * @author Mateo Tutic
  * @version 1.0
  * @since 05.05.2019
  */
-public class GoToJail extends Square {
+public class GoToJailSquare extends Square {
     private Square jail;    // La case représentant la prison
 
     /**
@@ -17,7 +17,7 @@ public class GoToJail extends Square {
      *
      * @param jail La case représentant la prison
      */
-    public GoToJail(Square jail) {
+    public GoToJailSquare(Square jail) {
         super("GoToJail");
         this.jail = jail;
     }
