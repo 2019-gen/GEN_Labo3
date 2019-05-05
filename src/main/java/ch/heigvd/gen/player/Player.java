@@ -3,17 +3,19 @@ package ch.heigvd.gen.player;
 import ch.heigvd.gen.monopoly.Board;
 import ch.heigvd.gen.monopoly.Die;
 import ch.heigvd.gen.monopoly.Piece;
-import ch.heigvd.gen.monopoly.Square;
+import ch.heigvd.gen.monopoly.square.Square;
 
 import java.util.LinkedList;
 
 public class Player {
     private final String name;
     private final Piece piece;
+    private int cash;
 
     public Player(String name, String pieceName, Square startSquare) {
         this.name = name;
         this.piece = new Piece(pieceName, startSquare);
+        this.cash = 1500;
     }
 
     public void takeTurn(Board board, LinkedList<Die> dice) {
@@ -36,5 +38,27 @@ public class Player {
 
     public String toString() {
         return name;
+    }
+
+    public void addCash(int value) {
+        if (cash < 0) {
+            throw new IllegalArgumentException("Impossible d'ajouter du cash negatif");
+        }
+        cash += value;
+    }
+
+    public void reduceCash(int value) {
+        if (cash < value) {
+            throw new IllegalArgumentException("Impossible d'avoir du cash en negatif");
+        }
+        cash -= value;
+    }
+
+    public Piece getPiece() {
+        return piece;
+    }
+
+    public int getNetWorth() {
+        return cash;
     }
 }

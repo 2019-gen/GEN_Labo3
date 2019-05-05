@@ -1,5 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.square.Square;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +32,10 @@ class BoardTest {
         for (int i = 1; i < board.getNbrOfSquares(); i++) {
             names.add("Square " + i);
         }
+
+        names.set(4, "IncomeTax");
+        names.set(10, "Jail");
+        names.set(30, "GoToJail");
 
         ArrayList<Square> squares = board.getSquares();
         for (int i = 0; i < board.getNbrOfSquares(); i++) {

@@ -1,4 +1,6 @@
-package ch.heigvd.gen.monopoly;
+package ch.heigvd.gen.monopoly.square;
+
+import ch.heigvd.gen.player.Player;
 
 /**
  * Cette classe représente une case dans le jeux Monopoly
@@ -7,8 +9,8 @@ package ch.heigvd.gen.monopoly;
  * @version 1.0
  * @since 03.05.2019
  */
-public class Square {
-    final String name;    // Nom de la case
+public abstract class Square {
+    private final String name;    // Nom de la case
 
     /**
      * Constructeur
@@ -37,4 +39,11 @@ public class Square {
     public String toString() {
         return name;
     }
+
+    /**
+     * Permet de réaliser une action spéciale en fonction de la case
+     *
+     * @param p Joueur qui se trouve sur la case
+     */
+    public abstract void landedOn(Player p);
 }

@@ -1,5 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.square.RegularSquare;
+import ch.heigvd.gen.monopoly.square.Square;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +15,7 @@ public class PieceTest {
     @BeforeAll
     static void setUp() {
         pieceName = "piece-test";
-        location = new Square("location-test");
+        location = new RegularSquare("location-test");
         piece = new Piece(pieceName, location);
     }
 
@@ -25,7 +27,7 @@ public class PieceTest {
 
     @Test
     void pieceLocationShouldBeSet() {
-        Square newLocation = new Square("location-test-2");
+        Square newLocation = new RegularSquare("location-test-2");
         piece.setLocation(newLocation);
         assertEquals(newLocation, piece.getLocation());
     }
