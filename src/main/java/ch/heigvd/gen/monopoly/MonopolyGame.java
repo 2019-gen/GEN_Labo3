@@ -1,7 +1,8 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.board.Board;
 import ch.heigvd.gen.monopoly.dice.Cup;
-import ch.heigvd.gen.player.Player;
+import ch.heigvd.gen.monopoly.player.Player;
 
 import java.util.Arrays;
 import java.util.Collections;

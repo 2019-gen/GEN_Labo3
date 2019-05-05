@@ -1,6 +1,6 @@
-package ch.heigvd.gen.monopoly.square;
+package ch.heigvd.gen.monopoly.board.square;
 
-import ch.heigvd.gen.player.Player;
+import ch.heigvd.gen.monopoly.player.Player;
 
 /**
  * Cette classe représente la case IncomeTax du jeux Monopoly
