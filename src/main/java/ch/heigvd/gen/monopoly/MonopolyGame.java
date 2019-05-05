@@ -31,15 +31,15 @@ public class MonopolyGame {
             throw new IllegalArgumentException("Nombre de joueurs incompatible");
         }
 
+        board = new Board();
+
         for (String playerName : players) {
-            this.players.add(new Player(playerName));
+            this.players.add(new Player(playerName, board.getSquares().get(0)));
         }
 
         for (int i = 0; i < NUMB_OF_DICE; ++i) {
             dice.add(new Die());
         }
-
-        board = new Board();
     }
 
     /**

@@ -1,16 +1,19 @@
 package ch.heigvd.gen.player;
 
 import ch.heigvd.gen.monopoly.Die;
+import ch.heigvd.gen.monopoly.Piece;
+import ch.heigvd.gen.monopoly.Square;
 
 import java.util.LinkedList;
 
 public class Player {
     private final String name;
-//    private final Piece piece;
+    private final Piece piece;
 
-    public Player(String name) {
+    public Player(String name, Square startSquare) {
         this.name = name;
-        // creer la piece
+        // TODO: Piece en tant qu'enum?
+        this.piece = new Piece("Test", startSquare);
     }
 
     public void takeTurn(LinkedList<Die> dice) {
