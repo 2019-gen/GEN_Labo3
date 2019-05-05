@@ -2,6 +2,8 @@ package ch.heigvd.gen.monopoly.dice;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,8 +21,10 @@ class CupTest {
         assertEquals(0, cup.getTotal());
     }
 
-    @Test
-    void aCupShouldHaveTheCorrectNbrOfDice() {
-        assertEquals(cup.getDice().size(), NBR_OF_DICE);
+    @ParameterizedTest
+    @ValueSource(ints = {2, 4, 10})
+    void aCupShouldHaveTheCorrectNbrOfDice(int nbrOfDice) {
+        Cup cup = new Cup(nbrOfDice);
+        assertEquals(cup.getDice().size(), nbrOfDice);
     }
 }

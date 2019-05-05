@@ -1,10 +1,8 @@
 package ch.heigvd.gen.monopoly;
 
-import ch.heigvd.gen.monopoly.MonopolyGame;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Unit test for simple MononpolyGame.
