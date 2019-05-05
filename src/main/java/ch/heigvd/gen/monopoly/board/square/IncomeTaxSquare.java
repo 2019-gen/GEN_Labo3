@@ -20,5 +20,6 @@ public class IncomeTaxSquare extends Square {
     @Override
     public void landedOn(Player p) {
         p.reduceCash(Math.min(200, p.getNetWorth() / 10));
+        System.out.println("C'est l'heure des taxes !");
     }
 }
