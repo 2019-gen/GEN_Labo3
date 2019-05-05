@@ -8,7 +8,7 @@ import ch.heigvd.gen.monopoly.square.Square;
 /**
  * Cette classe représente un joueur de monopoly
  *
- * @author Loris Gilliand
+ * @author Loris Gilliand, Luc Wachter
  * @version 1.0
  * @since 05.05.2019
  */

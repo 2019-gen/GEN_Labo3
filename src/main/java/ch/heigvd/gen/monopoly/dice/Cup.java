@@ -45,4 +45,13 @@ public class Cup {
     public int getTotal() {
         return total;
     }
+
+    /**
+     * Simple getter pour les dés du bol
+     *
+     * @return Une liste des dés
+     */
+    public LinkedList<Die> getDice() {
+        return dice;
+    }
 }
