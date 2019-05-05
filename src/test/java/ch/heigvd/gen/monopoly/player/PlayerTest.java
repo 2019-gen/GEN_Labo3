@@ -1,4 +1,4 @@
-package ch.heigvd.gen.player;
+package ch.heigvd.gen.monopoly.player;
 
 import ch.heigvd.gen.monopoly.Board;
 import ch.heigvd.gen.monopoly.dice.Cup;

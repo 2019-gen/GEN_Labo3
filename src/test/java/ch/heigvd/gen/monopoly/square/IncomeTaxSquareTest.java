@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly.square;
 
-import ch.heigvd.gen.player.Player;
+import ch.heigvd.gen.monopoly.player.Player;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
