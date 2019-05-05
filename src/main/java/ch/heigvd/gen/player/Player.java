@@ -49,8 +49,13 @@ public class Player {
         Square oldLocation = piece.getLocation();
         piece.setLocation(board.getSquare(oldLocation, score));
 
+        // Action spéciale à faire en fonction de la case sur laquelle on tombe
+        piece.getLocation().landedOn(this);
+
         System.out.println(this + " avance sa pièce " + piece + " de la case " + oldLocation + " a la case "
                 + piece.getLocation());
+
+        System.out.println(this + " a " + cash + "$");
     }
 
     /**
