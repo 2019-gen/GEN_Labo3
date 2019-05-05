@@ -15,7 +15,7 @@ import java.util.LinkedList;
 public class MonopolyGame {
     private static final int NUMB_OF_ROUNDS = 20;
     private static final int NUMB_OF_DICE = 2;
-    //    private final Board board;
+    private final Board board;
     private final LinkedList<Die> dice = new LinkedList<Die>();
     private final LinkedList<Player> players = new LinkedList<Player>();
 
@@ -39,7 +39,7 @@ public class MonopolyGame {
             dice.add(new Die());
         }
 
-//        board = new Board();
+        board = new Board();
     }
 
     /**
@@ -47,7 +47,7 @@ public class MonopolyGame {
      */
     void playGame() {
         System.out.println("Debut de la partie :\n");
-        for (currentRound = 1; currentRound <= NUMB_OF_ROUNDS; ++currentRound){
+        for (currentRound = 1; currentRound <= NUMB_OF_ROUNDS; ++currentRound) {
             playRound();
         }
         System.out.println("Fin de la partie");
@@ -66,6 +66,7 @@ public class MonopolyGame {
 
     /**
      * Getter permettant d'obtenir les dès du jeux
+     *
      * @return liste des dés
      */
     public LinkedList<Die> getDice() {
