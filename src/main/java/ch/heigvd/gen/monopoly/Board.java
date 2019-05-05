@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
-import ch.heigvd.gen.monopoly.square.Square;
+import ch.heigvd.gen.monopoly.square.*;
 
 import java.util.ArrayList;
 
@@ -20,13 +20,19 @@ public class Board {
      * Constructeur : génère les cases du plateau
      */
     Board() {
-        // La première case s'appelle Go
-        squares.add(new Square("Go"));
+        // Création de la première case
+        squares.add(new GoSquare());
 
-        // Les autres sont numérotées
+        // Création des cases basiques
         for (int i = 1; i < NBR_OF_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+            squares.add(new RegularSquare("Square " + i));
         }
+
+        // Création des cases spéciales
+        RegularSquare jail = new RegularSquare("Jail"); // Case représentant la prison
+        squares.set(10, jail);
+        squares.set(30, new GoToJailSquare(jail));
+        squares.set(4, new IncomeTaxSquare());
     }
 
     /**
